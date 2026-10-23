@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #FDFBF7;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #F8F6F0;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --accent-gold: #C59B27;
+    --accent-gold-hover: #A8811A;
+    --accent-gold-light: #FDF6E2;
+    --border-subtle: #E2E8F0;
+    --border-gold: rgba(197, 155, 39, 0.25);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-jakarta), var(--font-inter), sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Clean Light Theme Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.glass-gold-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 0 15px 0 rgba(197, 155, 39, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-gold-card:hover {
+  border-color: rgba(197, 155, 39, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.1), 0 0 25px 0 rgba(197, 155, 39, 0.15);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A8811A 0%, #C59B27 50%, #8C6A10 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  border: 1px solid #0F172A;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-gradient-btn:hover {
+  background: linear-gradient(135deg, #C59B27 0%, #A8811A 100%);
+  color: #FFFFFF;
+  border-color: #C59B27;
+  box-shadow: 0 10px 25px rgba(197, 155, 39, 0.3);
+  transform: translateY(-2px);
+}
+
+.gold-secondary-btn {
+  background: #FDF6E2;
+  color: #8C6A10;
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gold-secondary-btn:hover {
+  background: #C59B27;
+  color: #FFFFFF;
+  border-color: #C59B27;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F6F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B27;
+}
